@@ -10,7 +10,7 @@ Monday - 18-06-2018
     https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3341414/pdf/nihms85919.pdf)
   - diagnostics lecture
 
-Tuesday - 19-06-2108
+Tuesday - 19-06-2018
   - reading: - Methodological challenges and solutions in auditory functional magnetic resonance imaging
                 (https://www.frontiersin.org/articles/10.3389/fnins.2014.00253/full)
              - Aquisition & specifics, modlaities of Mri data; Preprocessing
@@ -26,4 +26,20 @@ Wednesday - 20-06-2018
               - general linear models (http://mriquestions.com/general-linear-model.html)
               -
   - quick introduction to gnu octave and mri phantom measurments
+  - cleaning up questionnaiers
+  - assisting in eeg-experiment (Marie)
+Thursday - 21-06-2018
+  - updating questionnaires -> allow commata separated input by participants, trying to inhibit esc-function
+  - rehearsing instructions for stress experiment (rebekka)
+  - reading: - fmri statistics(http://mriquestions.com/fmri-statistical-analysis.html)
+             - fmri processing overview(http://mriquestions.com/processanalyze-fmri.html)
+  - setting up local google drive folder
+Friday - 22-06-2018
+  - reviewing specified info on tone burst for alpaca (https://github.com/PeerHerholz/ALPACA/blob/master/resources/tutorials/ALPACA_generating_stimuli_tonotopy_auditory_cortex.ipynb)
+  -  24-bit amplitude resolution? 20 trials * 8 frequencies -> range for frequency manipulation is 1 semitone around nominal 
+     frequency (so 20 different tones in this range?),  equivalent rectangular bandwith?
+  - implementing first tone series in audacity
+  - reading: - logarithm and sinus/cosinus waves
+  - creating template script for psychopy questionnaires
+  - assisting in stresss exp 
  
