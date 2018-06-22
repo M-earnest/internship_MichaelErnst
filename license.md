@@ -1,6 +1,6 @@
                     GNU GENERAL PUBLIC LICENSE
                        Version 3, 29 June 2007
-Copyright (C) <2018> <Michael Ernst>
+Copyright (C) [2018 Michael Ernst]
 contact: m.earnest211@gmail.com
   
 This program comes with absolutely no warranty
