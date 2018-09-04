@@ -1,4 +1,4 @@
-1 - 20 August:
+
 - studying: claculus, music theory, sound engineering with python, bayes on coursera
 - assisting in tnac and hoaf experiments
 
@@ -19,9 +19,10 @@
   - extended gaussian white noise for background presentation:
     -> randomising frequency at every sample point
     -> adapted formula for ERBF from VOICEBOX speech processing toolbox for MATLAB into python
-    -> simply added said filter to white noise
-    -> amplitude corrected signal so that amp max = 0.24
+    -> build white noise out of given bandwith
     
 - still need to look into actual volume control via python and if there would be any distortion, when presenting
   experiment over mrt-compatible headphones, as well as finding an apropriate base frequency for the white noise 
   or finding out if that is even necessary
+
+- adapting PEP8-Guidelines and further integration of exp-info into alpac_generate_stimuli notebook
