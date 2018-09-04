@@ -21,7 +21,7 @@ sr = 24400 # set sampling rate
 #freq in hz -> placeholder: not sure what would be apropriate here
 freq=np.arange(10,10000,dur_noise*sr)
 
-def erb(f):
+def erb_func(f):
 
     ''' define equivalent rectangular bandwith (ERB) for given frequency in hz
         → minimize variation inf hearing tresholds between
@@ -49,7 +49,7 @@ def erb(f):
     return erb, bnd
 
 # call function
-erb, bnd= erb(freq)
+erb, bnd= erb_func(freq)
 
 # randomly pick out of calculated freq-range to set gaussian white noise?
 # placeholder: not sure what to pick as mean here
@@ -81,7 +81,7 @@ nominal_frequencies=[200.0, 338.8, 573.8, 971.9
 
 timeline=np.arange(t.size)/sr # define timeline for plotting
 
-def frequency_range(nominal_frequencies):
+def frequency_range_func(nominal_frequencies):
 
     ''' varying nominal frequencies in range of 1 semitone
     x¹²=2
@@ -94,7 +94,7 @@ def frequency_range(nominal_frequencies):
             range_frequencies.append(frequency)
     return range_frequencies
 
-def pick_frequency(range_frequencies):
+def pick_frequency_func(range_frequencies):
 
     ''' randomly pick a freq in the specified range '''
 
@@ -110,11 +110,11 @@ def pick_frequency(range_frequencies):
 
 
 # sine evelope -> helps with reshaping of ramps
-def sine_envelope(t):
+def sine_envelope_func(t):
     return np.square(scipy.sin((1.0)*np.pi*t/t[-1])) #t[-1] = last value
 
 
-def create_sounds(random_frequency):
+def create_sounds_func(random_frequency):
 
     ''' function fitting onset and offset ramps to sounds,
         plot and output sounds and append sounds to a list'''
@@ -129,7 +129,7 @@ def create_sounds(random_frequency):
         onset_r=(amp*scipy.cos(2*scipy.pi*f*(t_ramp)))
 
         # multiply it by sine envelope
-        onset = sine_envelope(t_ramp)*onset_r
+        onset = sine_envelope_func(t_ramp)*onset_r
 
         # uncomment to plot your tones for visual inspection
         #plt.figure(figsize=(100,5))
@@ -216,9 +216,9 @@ def create_sounds(random_frequency):
             print(len(list_sounds))
             print('WARNING! dropped tone during creation -> rerunning loop!')
 
-            range_frequencies=frequency_range(nominal_frequencies)
-            random_frequency=pick_frequency(range_frequencies)
-            list_sounds=create_sounds(random_frequency)
+            range_frequencies=frequency_range_func(nominal_frequencies)
+            random_frequency=pick_frequency_func(range_frequencies)
+            list_sounds=create_sounds_func(random_frequency)
             restart=True
             print(len(list_sounds))
         elif len(list_sounds)==32:
@@ -236,9 +236,9 @@ def create_sounds(random_frequency):
     return list_sounds
 
 # call functions
-range_frequencies=frequency_range(nominal_frequencies)
-random_frequency=pick_frequency(range_frequencies)
-list_sounds=create_sounds(random_frequency)
+range_frequencies=frequency_range_func(nominal_frequencies)
+random_frequency=pick_frequency_func(range_frequencies)
+list_sounds=create_sounds_func(random_frequency)
 
 
 
