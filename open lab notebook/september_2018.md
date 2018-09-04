@@ -8,5 +8,6 @@ reading & studying: bayes, mathemactical notation
       - exchanged if-statement structure, which previously was used to differ between settings, to function statements
         -> simplifying structure into either one function for each setting or writing general function, which simply
            takes setting as keyword for saving
+      - changed range of for loop to (0, 14), instead of (0, 13)
            
 - updating distro to 18.04, including complete system overhaul
