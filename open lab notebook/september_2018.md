@@ -6,8 +6,7 @@ ansl: overhauling and adapting "aint_no_sound_loud_enough" exp
 - removed unnecessary global declarations
 - changed stimuli calls to relative paths and changed folder structure
 - exchanged if-statement structure, which previously was used to differ between settings, to function statements
-         -> simplifying structure into either one function for each setting or writing general function, which simply
-         takes setting as keyword for saving
-- changed range of for loop to (0, 14), instead of (0, 13)
+         -> simplifying structure into general function, which simply takes setting as keyword input
+- changed range to (0, 14), instead of (0, 13), so that all stimuli are presented
            
 updating distro to 18.04, including complete system overhaul
